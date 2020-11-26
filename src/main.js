@@ -60,13 +60,13 @@ export default class App {
 
             return false
 
-        }else if(((((((dia!=1 || dia!=2) || dia!=3) || dia!=4) || dia!=5) || dia!=6) || dia!=7)){
+        }else if(dia>7){
 
             return false
         
-        }else {
+        }else if ((terminacion!=0 || terminacion!=1) || terminacion!=2){
 
-            true
+            return true
         }
     }
 }
