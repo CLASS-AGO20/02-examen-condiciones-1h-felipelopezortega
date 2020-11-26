@@ -4,11 +4,11 @@ export default class App {
 
         if(pesos<2000){
 
-            return (pesos/ 20.5)
+            return (pesos * 20.5)
 
         }else if(pesos>=2000){
 
-            return (pesos/ 22.7)
+            return (pesos * 22.7)
         }
     }
 
@@ -31,6 +31,44 @@ export default class App {
             return kilometros*6.5
         }
     }
+
+    puedeCircular(dia, terminacion){
+
+        if(dia==1 && terminacion==0){
+
+            return true
+
+        }else if(dia!=1 && terminacion==0){
+
+            return false 
+
+        }else if(dia==2 && terminacion==1){
+
+            return true
+
+        }else if (dia!=2 && terminacion==1){
+
+            return false 
+
+        }else if((dia==3 || dia==4) && terminacion==2){
+
+            return true
+
+        
+
+        }else if((dia!=3 || dia!=4) && terminacion==2){
+
+            return false
+
+        }else if(((((((dia!=1 || dia!=2) || dia!=3) || dia!=4) || dia!=5) || dia!=6) || dia!=7)){
+
+            return false
+        
+        }else {
+
+            true
+        }
+    }
 }
 
 let app = new App();
@@ -49,3 +87,17 @@ console.log(app.costoRenta(150))
 console.log(app.costoRenta(199))
 console.log(app.costoRenta(200))
 console.log(app.costoRenta(249))
+
+//Función para ver si puede circular
+console.log(app.puedeCircular(1,1))
+console.log(app.puedeCircular(2,1))
+console.log(app.puedeCircular(3,1))
+console.log(app.puedeCircular(4,1))
+console.log(app.puedeCircular(5,1))
+console.log(app.puedeCircular(6,1))
+console.log(app.puedeCircular(7,1))
+console.log(app.puedeCircular(1,0))
+console.log(app.puedeCircular(4,2))
+console.log(app.puedeCircular(3,2))
+console.log(app.puedeCircular(8,1))
+
