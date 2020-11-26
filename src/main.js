@@ -54,8 +54,6 @@ export default class App {
 
             return true
 
-        
-
         }else if((dia!=3 || dia!=4) && terminacion==2){
 
             return false
